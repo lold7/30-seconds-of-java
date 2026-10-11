@@ -61,8 +61,8 @@ class ZipDirectorySnippetTest {
             regularFiles++;
           }
         }
-        assertEquals(4, zipFile.size());
-        assertEquals(2, directories); // The root directory + inner directory
+        assertEquals(2, zipFile.size());
+        assertEquals(0, directories); // No empty directory entries are written
         assertEquals(2, regularFiles); // Two simple files
       }
     } finally {
