@@ -29,6 +29,10 @@ package math;
  */
 public class SquareRoot {
 
+  private SquareRoot() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Returns square root of a number.
    *

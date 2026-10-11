@@ -24,25 +24,28 @@
 
 package string;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  * StringToDateSnippet.
  */
 public class StringToDateSnippet {
 
+  private StringToDateSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Convert string to date.
    *
    * @param date   the date string
    * @param format expected date format
-   * @return Date
-   * @throws ParseException in case of an unparseable date string
+   * @return LocalDate
+   * @throws java.time.format.DateTimeParseException in case of an unparseable date string
    */
-  public static Date stringToDate(String date, String format) throws ParseException {
-    var simpleDateFormat = new SimpleDateFormat(format);
-    return simpleDateFormat.parse(date);
+  public static LocalDate stringToDate(String date, String format) {
+    var formatter = DateTimeFormatter.ofPattern(format);
+    return LocalDate.parse(date, formatter);
   }
 }

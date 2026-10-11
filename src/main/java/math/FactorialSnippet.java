@@ -29,6 +29,10 @@ package math;
  */
 public class FactorialSnippet {
 
+  private FactorialSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Factorial. Works only for small numbers
    *

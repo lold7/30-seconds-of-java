@@ -29,6 +29,10 @@ package algorithm;
  */
 public class LinearSearchIn2dArraySnippet {
 
+  private LinearSearchIn2dArraySnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Search an item with linearSearch algorithm.
    *

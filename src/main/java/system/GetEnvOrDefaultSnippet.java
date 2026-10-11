@@ -29,6 +29,10 @@ package system;
  */
 public class GetEnvOrDefaultSnippet {
 
+  private GetEnvOrDefaultSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Read an environment variable or return a default value when it is missing.
    *

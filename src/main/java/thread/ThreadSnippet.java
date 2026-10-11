@@ -29,6 +29,10 @@ package thread;
  */
 public class ThreadSnippet {
 
+  private ThreadSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Creates and returns a new thread with the task assigned to it
    * (task will be performed parallel to the main thread).

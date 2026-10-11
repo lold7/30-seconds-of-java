@@ -31,6 +31,10 @@ import java.util.Arrays;
  */
 public class CountingSortSnippet {
 
+  private CountingSortSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Sort an array having zero or positive numbers with countingSort algorithm.
    *

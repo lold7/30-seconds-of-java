@@ -29,6 +29,10 @@ package math;
  */
 public class GreatestCommonDivisorSnippet {
 
+  private GreatestCommonDivisorSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Greatest common divisor calculation.
    *

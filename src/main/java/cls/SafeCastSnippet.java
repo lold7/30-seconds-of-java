@@ -31,6 +31,10 @@ import java.util.Optional;
  */
 public class SafeCastSnippet {
 
+  private SafeCastSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Safely casts an object to the specified type.
    *

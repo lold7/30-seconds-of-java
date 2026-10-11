@@ -37,7 +37,7 @@ import org.junit.jupiter.api.Test;
  */
 class HttpPostSnippetTest {
   /**
-   * Tests for {@link HttpPostSnippet#httpPost(String, HashMap)}.
+   * Tests for {@link HttpPostSnippet#httpPost(String, java.util.Map)}.
    */
   @Test
   void testHttpPost() throws IOException, InterruptedException {

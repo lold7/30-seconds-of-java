@@ -31,6 +31,10 @@ import java.util.Arrays;
  */
 public class ArrayMedianSnippet {
 
+  private ArrayMedianSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Returns the median of the array.
    *

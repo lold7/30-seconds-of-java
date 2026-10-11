@@ -29,6 +29,10 @@ package algorithm;
  */
 public class BinarySearchSnippet {
 
+  private BinarySearchSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Search an item with binarySearch algorithm.
    *

@@ -35,6 +35,10 @@ import java.util.stream.Collectors;
  */
 public class InputStreamToStringSnippet {
 
+  private InputStreamToStringSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Convert InputStream to String.
    *

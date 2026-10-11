@@ -31,6 +31,10 @@ import java.util.Arrays;
  */
 public class ArrayMeanSnippet {
 
+  private ArrayMeanSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Returns the mean of the integers in the array.
    *

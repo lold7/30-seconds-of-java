@@ -29,6 +29,10 @@ package algorithm;
  */
 public class QuickSortSnippet {
 
+  private QuickSortSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Sort an array with quicksort algorithm.
    *

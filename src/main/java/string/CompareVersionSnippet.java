@@ -31,6 +31,10 @@ import java.util.regex.Pattern;
  */
 public class CompareVersionSnippet {
 
+  private CompareVersionSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   private static final Pattern VERSION_PATTERN =
       Pattern.compile("(?<!\\w)\\d++(?:[.-]\\d++)*+");
 

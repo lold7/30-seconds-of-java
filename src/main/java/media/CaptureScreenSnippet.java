@@ -37,6 +37,10 @@ import javax.imageio.ImageIO;
  */
 public class CaptureScreenSnippet {
 
+  private CaptureScreenSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * Capture screenshot and save it to PNG file. Credits: https://viralpatel.net/blogs/how-to-take-screen-shots-in-java-taking-screenshots-java/
    *

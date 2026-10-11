@@ -24,37 +24,26 @@
 
 package date;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.Locale;
+import java.time.Month;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
  * Tests for AddDaysToDateSnippet.
  */
-public class AddDaysToDateSnippetTest {
+class AddDaysToDateSnippetTest {
 
   /**
   * Test add days to date.
-  *
-  * @throws ParseException if date can't be parsed
-  *
   */
   @Test
-  void testAddDaysToDate() throws ParseException {
-    DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
+  void testAddDaysToDate() {
+    LocalDate date = LocalDate.of(2022, Month.JANUARY, 1);
 
-    String dateStr = "January 1, 2022";
-    Date date = format.parse(dateStr);
+    LocalDate dateAfterTwoDaysExpected = LocalDate.of(2022, Month.JANUARY, 3);
 
-    String dateStrAfter = "January 3, 2022";
-    Date dateAfterTwoDaysExpected = format.parse(dateStrAfter);
-
-    Date dateAfterTwoDaysActual = AddDaysToDateSnippet.addDaysToDate(date, 2);
+    LocalDate dateAfterTwoDaysActual = AddDaysToDateSnippet.addDaysToDate(date, 2);
     Assertions.assertEquals(dateAfterTwoDaysExpected, dateAfterTwoDaysActual);
   }
 

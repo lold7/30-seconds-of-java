@@ -31,6 +31,10 @@ import java.io.File;
  */
 public class ListDirectoriesSnippet {
 
+  private ListDirectoriesSnippet() {
+    // utility class with static methods only, not meant to be instantiated
+  }
+
   /**
    * List directories.
    *
