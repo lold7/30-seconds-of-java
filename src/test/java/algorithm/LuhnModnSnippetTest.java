@@ -29,6 +29,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.stream.Stream;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -66,6 +67,19 @@ class LuhnModnSnippetTest {
       assertFalse(LuhnModnSnippet.validateCheckCharacter(fullInput),
               "Validation should fail for a mismatched check character.");
     }
+  }
+
+  /**
+   * Tests that an invalid character or code point throws IllegalArgumentException.
+   */
+  @Test
+  void testInvalidCharacterAndCodePoint() {
+    assertThrows(IllegalArgumentException.class, () ->
+            LuhnModnSnippet.codePointFromCharacter('#'));
+    assertThrows(IllegalArgumentException.class, () ->
+            LuhnModnSnippet.characterFromCodePoint(-1));
+    assertThrows(IllegalArgumentException.class, () ->
+            LuhnModnSnippet.characterFromCodePoint(36));
   }
 
   private static Stream<String> validInputProvider() {

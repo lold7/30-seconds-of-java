@@ -38,6 +38,8 @@ class FormatBytesSnippetTest {
      */
   @Test
   void formatBytes() {
+    assertEquals("512 B", FormatBytesSnippet.formatBytes(512));
+    assertEquals("1.50 KB", FormatBytesSnippet.formatBytes(1536));
     assertEquals("1.46 MB", FormatBytesSnippet.formatBytes(1536000));
     assertEquals("4.00 GB", FormatBytesSnippet.formatBytes(4294967296L));
     assertEquals("3.00 TB", FormatBytesSnippet.formatBytes(3L * 1024 * 1024 * 1024 * 1024));

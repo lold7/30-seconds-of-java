@@ -57,6 +57,9 @@ public class FibonacciSnippet {
    * @return fibonacci number for given n
    */
   public static int fibonacciBig(int n) {
+    if (n <= 1) {
+      return n;
+    }
     int previous = 0;
     int current = 1;
     for (int i = 0; i < n - 1; i++) {
